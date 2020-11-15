@@ -9,8 +9,8 @@ import './global.less'
 export default function Routerset() {
   return (
     <>
-      <Header />
-      <SideBar />
+      {/* <Header /> */}
+      {/* <SideBar /> */}
       <Router>
         {
           routes.map((value, index) => {

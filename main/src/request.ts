@@ -1,9 +1,9 @@
 
-import io from 'socket.io-client';
+// import io from 'socket.io-client';
 
-const socket = io('');
+// const socket = io('');
 
-socket.on('test', function(data: any) {
-  console.log(data);
-});
-socket.emit('send', { test: 'test' });
+// socket.on('test', function(data: any) {
+//   console.log(data);
+// });
+// socket.emit('send', { test: 'test' });

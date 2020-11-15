@@ -22,7 +22,7 @@ function createWindow() {
 
   if (ENV === "development") {
     // 开发环境
-    mainWin.loadURL('http://localhost:5924');
+    mainWin.loadURL('http://localhost:5924/#/account/login');
   } else {
     // 生产环境
     mainWin.loadURL(url.format({
