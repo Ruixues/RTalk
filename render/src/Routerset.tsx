@@ -9,9 +9,9 @@ import './global.less'
 export default function Routerset() {
   return (
     <>
-      {/* <Header /> */}
-      {/* <SideBar /> */}
       <Router>
+        <Header />
+        <SideBar />
         {
           routes.map((value, index) => {
             return <Route path={value.path} exact={value.exact || true} component={value.component} key={index} />

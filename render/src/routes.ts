@@ -13,10 +13,10 @@ const routes: Routes = [
     path: '/',
     component: Index,
   },
-  {
-    path: '/account/login',
-    component: Login
-  }
+  // {
+  //   path: '/account/login',
+  //   component: Login
+  // }
 ]
 
 export default routes;

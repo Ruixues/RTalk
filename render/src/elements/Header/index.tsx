@@ -1,11 +1,15 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import './style.less';
 import { ipcRenderer } from 'electron';
+import Login from '@/components/account/Login';
 
 import {
   Avatar,
-  TextField
+  TextField,
+  Dialog,
+  DialogTitle,
+  DialogContent
 } from '@material-ui/core';
 import {
   MinusOutlined,
@@ -13,7 +17,7 @@ import {
   BorderOutlined,
   UserOutlined,
   MenuOutlined,
-  SearchOutlined
+  SearchOutlined,
 } from '@ant-design/icons';
 
 function min() {
@@ -29,8 +33,20 @@ function close() {
 }
 
 function Header() {
+  const [state, setState] = useState(false);
+
+  const handleDialog = () => {
+    setState(true);
+  }
+
   return (
     <div className="app-header">
+      <Dialog open={state}>
+        <DialogTitle>登录</DialogTitle>
+        <DialogContent>
+          <Login />
+        </DialogContent>
+      </Dialog>
       <div className="app-header-part">
         <div className="app-header-logo">logo</div>
         <div className="app-header-search">
@@ -39,7 +55,7 @@ function Header() {
         </div>
       </div>
       <div className="app-header-part">
-        <div className="app-header-function">
+        <div className="app-header-function" onClick={handleDialog}>
           <Avatar alt="头像"><UserOutlined /></Avatar>&nbsp;&nbsp;
           Test&nbsp;&nbsp;
           <MenuOutlined />
