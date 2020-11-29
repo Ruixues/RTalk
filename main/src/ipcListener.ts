@@ -1,6 +1,7 @@
 
 import { ipcMain } from 'electron';
 import { mainWin } from './main';
+import login from './request/user';
 
 export default function ipc() {
   ipcMain.on('win-minimize', () => {
@@ -18,4 +19,9 @@ export default function ipc() {
   ipcMain.on('win-close', () => {
     mainWin.hide();
   });
+
+  ipcMain.on('req-login', async (event, ...args) => {
+    let res = await login(args[1], args[2]);
+    event.reply(res);
+  })
 }

@@ -12,14 +12,14 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowElevation": true, 
+      "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
       "installerIcon": "./build/icons/aaa.ico",
       "uninstallerIcon": "./build/icons/bbb.ico",
       "installerHeaderIcon": "./build/icons/aaa.ico",
-      "createDesktopShortcut": true, 
+      "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "xxxx", 
+      "shortcutName": "xxxx",
       "include": "build/script/installer.nsh"
     }
   },
@@ -39,5 +39,10 @@
     "webpack": "4.44.2",
     "webpack-cli": "^4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/socket.io-client": "^1.4.34",
+    "axios": "^0.21.0",
+    "socket.io-client": "^3.0.3"
+  }
 }
